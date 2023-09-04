@@ -1,11 +1,11 @@
 import React from 'react';
-import { Global } from "@emotion/react";
-import { reset } from "./styles/globalStyle";
+import { Global } from '@emotion/react';
+import { reset } from './styles/globalStyle';
 
 function App() {
   return (
     <>
-     <Global styles={reset} />
+      <Global styles={reset} />
     </>
   );
 }
