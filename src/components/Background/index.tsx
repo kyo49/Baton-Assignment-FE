@@ -4,21 +4,20 @@ import { CloudIcon } from '../../assets';
 
 const Background = () => {
   const CloudPositions = [
-    { top: 450, left: 500 },
-    { top: 400, left: 1100 },
-    { top: 500, left: 40 },
-    { top: 600, left: 1250 },
-    { top: 680, left: 180 },
-    { top: 660, left: 1100 },
-    { top: 700, left: 480 },
+    { top: 35, left: 75 },
+    { top: 45, left: 8 },
+    { top: 50, left: 15 },
+    { top: 65, left: 80 },
+    { top: 70, left: 0 },
+    { top: 80, left: 28 },
   ];
 
   const Clouds = CloudPositions.map((position, index) => {
     const style = {
-      top: `${position.top}px`,
-      left: `${position.left}px`,
+      top: `${position.top}%`,
+      left: `${position.left}%`,
     };
-    return <S.CloundImg src={CloudIcon} index={index} style={style} />;
+    return <S.CloundImg src={CloudIcon} key={index} style={style} />;
   });
 
   return <S.BackgroundArea>{Clouds}</S.BackgroundArea>;
