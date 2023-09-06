@@ -9,6 +9,5 @@ export const BackgroundArea = styled.div`
 export const CloundImg = styled.img`
   position: absolute;
   width: 22vh;
-  height: 140px;
   object-fit: cover;
 `;
