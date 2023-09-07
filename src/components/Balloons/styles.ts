@@ -77,7 +77,7 @@ const floating = keyframes`
 	}
 `;
 
-export const StyledBalloon = styled.div<{
+export const Balloon = styled.div<{
   show: boolean;
   left: number;
   duration: number;
@@ -97,7 +97,7 @@ export const StyledBalloon = styled.div<{
   animation-duration: ${(props) => `${props.duration}s`};
   animation-delay ${useRandom(0, 4)};
   border: 1px solid ${(props) => (props.transparent ? '#5e5f62' : 'none')};
-  --balloonDimension: 10vmax;
+  --balloonDimension: 9vmax;
   width: var(--balloonDimension);
   height: var(--balloonDimension);
   border-radius: 100% 100% 20% 100%;
@@ -128,17 +128,18 @@ export const StyledBalloon = styled.div<{
     border-radius: 22%;
     transform: rotateZ(-45deg);
   }
-  .string {
-    position: absolute;
-    background-color: #5e5f62;
-    border-radius: 50%/100px 100px 0 0;
-    width: 4px;
-    height: calc(var(--balloonDimension) * 0.6);
-    transform-origin: top center;
-    transform: rotateZ(-45deg);
-    top: calc(var(--balloonDimension) - 5px);
-    left: calc(var(--balloonDimension) - 8px);
-  }
+`;
+
+export const BalloonLine = styled.div`
+  position: absolute;
+  background-color: #5e5f62;
+  border-radius: 50%/100px 100px 0 0;
+  width: 4px;
+  height: calc(var(--balloonDimension) * 0.6);
+  transform-origin: top center;
+  transform: rotateZ(-45deg);
+  top: calc(var(--balloonDimension) - 5px);
+  left: calc(var(--balloonDimension) - 8px);
 `;
 
 export const BalloonMsg = styled.span`
