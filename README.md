@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+### 🧩 기술 스택
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```bash
+    "react": "^18.2.0",
+    "typescript": "^4.9.5",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+```
 
-## Available Scripts
+### 📁 파일 구조
+```bash
+.
+└─ src
+   ├─ App.tsx
+   ├─ index.tsx
+   ├─ react-app-env.d.ts
+   ├─ assets               	이미지 관리 (png, index)
+   |  └─ ...
+   ├─ hooks         	
+   │  	  ├─ useRandom    
+   │      └─ useRandomColor     
+   ├─ components        
+   │      ├─ Background   뒷배경
+   │  	  ├─ Balloons     풍선
+   │      └─ Content      콘텐츠   
+   └─ styles           		
+      └─ globalStyles.ts  전역 스타일
+```
 
-In the project directory, you can run:
+### ✍ 커밋 컨벤션
 
-### `npm start`
+> 예시 : [FEAT] Adding main components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| 제목     | 내용                                                         |
+| -------- | ------------------------------------------------------------ |
+| SETTING  | 작업 세팅 커밋 (패키지 설치, 파일 추가 등)                   |
+| FEAT     | 기능 추가 및 변경 (화면 영향 o)                              |
+| STYLE    | 스타일 관련 기능(코드 포맷팅, 세미콜론 누락, 코드 자체의 변경이 없는 경우) |
+| FIX      | 버그 수정, 맞지 않는 값 수정                                 |
+| REFACTOR | 더 좋은 코드 개선 (화면 영향 x)                              |
+| ETC      | 문서 작성 or 그 외 커밋(주석, 개행 등)                       |
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 👩‍💻 개발 일지 노션
+https://peach-pewter-2d6.notion.site/f2788cf98be84fba8e336236b872080c?p=d9e0f67c986d41278939b1f7353cc514&pm=c
