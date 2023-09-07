@@ -6,11 +6,12 @@ export const ContentArea = styled.div`
   bottom: 0;
   left: 50%;
   transform: translate(-50%);
+  z-index: 10;
 `;
 
 export const CastleImg = styled.img`
-  width: 450px;
-  height: 450px;
+  width: 420px;
+  height: 420px;
   vertical-align: middle;
   cursor: pointer;
 `;
@@ -29,19 +30,18 @@ export const HeartBalloon = styled.div`
   bottom: 60%;
   left: 95%;
   transform: rotate(25deg);
-  z-index: 1;
   img {
-    width: 15vw;
+    width: 10vw;
     animation: ${bounceIn} 2s ease-in-out infinite;
   }
   span {
-    width: 14vw;
+    width: 10vw;
     position: absolute;
     bottom: 50%;
-    left: 5%;
+    left: 2%;
     color: #fff;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     animation: ${bounceIn} 2s ease-in-out infinite;
   }
 `;
@@ -56,7 +56,7 @@ const floating = keyframes`
 `;
 
 export const CircleBalloon = styled.div`
-  --balloonDimension: 10vmax;
+  --balloonDimension: 8vmax;
   width: var(--balloonDimension);
   height: var(--balloonDimension);
   border-radius: 100% 100% 50% 100%;
@@ -84,7 +84,7 @@ export const CircleBalloon = styled.div`
     left: 12%;
     text-align: center;
     color: #5e5f62;
-    font-size: 1rem;
+    font-size: 0.8rem;
     transform: rotate(310deg);
   }
 `;
