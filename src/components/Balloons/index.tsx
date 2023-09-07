@@ -32,7 +32,7 @@ const Balloon = () => {
   return (
     <>
       {show ? (
-        <S.StyledBalloon
+        <S.Balloon
           color={randomColor}
           onDoubleClick={popBalloon}
           duration={duration}
@@ -40,9 +40,9 @@ const Balloon = () => {
           transparent={transparent}
           show={show}
         >
-          <div className="string" />
+          <S.BalloonLine />
           {transparent ? <S.BalloonMsg>Lucky balloon!</S.BalloonMsg> : null}
-        </S.StyledBalloon>
+        </S.Balloon>
       ) : null}
     </>
   );
