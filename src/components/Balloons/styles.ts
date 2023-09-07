@@ -7,11 +7,11 @@ const balloonsLeftUpKFAnimation = (left: number) => {
   return keyframes`
     0%{
       top: 100vh;
-      left: ${`${left}vw`};
+      left: ${`${useRandom(40, 50)}vw`};
     }
     15%{
-      top: ${`${useRandom(70, 80)}vh`};
-      left: ${`${left - useRandom(20, 40)}vw`};
+      top: ${`${useRandom(60, 70)}vh`};
+      left: ${`${left - useRandom(10, 20)}vw`};
     }
     25%{
       top: ${`${useRandom(45, 55)}vh`};
@@ -19,7 +19,7 @@ const balloonsLeftUpKFAnimation = (left: number) => {
     }
     45%{
       top: ${`${useRandom(25, 40)}vh`};
-      left: ${`${left - useRandom(30, 50)}vw`};
+      left: ${`${left - useRandom(30, 40)}vw`};
     }
     80%{
       top: ${`${useRandom(5, 15)}vh`};
@@ -27,7 +27,7 @@ const balloonsLeftUpKFAnimation = (left: number) => {
     }
     100%{
       top: 0;
-      left: ${useRandom(1, 50)}vw;
+      left: ${useRandom(0, 50)}vw;
     }
 `;
 };
@@ -36,15 +36,15 @@ const balloonsRightUpKFAnimation = (left: number) => {
   return keyframes`
     0%{
       top: 100vh;
-      left: ${`${left}vw`};
+      left: ${`${useRandom(40, 50)}vw`};
     }
     15%{
-      top: ${`${useRandom(70, 80)}vh`};
-      left: ${`${left - useRandom(10, 20)}vw`};
+      top: ${`${useRandom(60, 70)}vh`};
+      left: ${`${left}vw`};
     }
     30%{
       top: ${`${useRandom(60, 70)}vh`};
-      left: ${`${left - useRandom(10, 30)}vw`};
+      left: ${`${left - useRandom(15, 20)}vw`};
     }
     55%{
       top: ${`${useRandom(40, 6)}vh`};
@@ -84,9 +84,7 @@ export const StyledBalloon = styled.div<{
   color: string;
   transparent: boolean;
 }>`
-  z-index: ${useRandom(5, 9)};
   cursor: pointer;
-  user-select: none;
   background-color: ${(props) => props.color};
   display: ${(props) => (props.show ? 'block' : 'none')};
   left: ${(props) => `${props.left}vw`};
@@ -99,11 +97,10 @@ export const StyledBalloon = styled.div<{
   animation-duration: ${(props) => `${props.duration}s`};
   animation-delay ${useRandom(0, 4)};
   border: 1px solid ${(props) => (props.transparent ? '#5e5f62' : 'none')};
-  --balloonDimension: 12vmax;
+  --balloonDimension: 10vmax;
   width: var(--balloonDimension);
   height: var(--balloonDimension);
   border-radius: 100% 100% 20% 100%;
-  margin: 0 0 0 25px;
   position: fixed;
   bottom: calc(-1 * var(--balloonDimension));
   &::before {
@@ -148,6 +145,6 @@ export const BalloonMsg = styled.span`
   color: #fff;
   position: absolute;
   top: 50%;
-  left: 28%;
+  left: 25%;
   transform: rotate(315deg);
 `;
