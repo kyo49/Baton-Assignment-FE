@@ -19,12 +19,11 @@ const Balloon = () => {
   );
   audio.volume = 0.5;
 
-  const popBalloon = (e: any) => {
-    let t = e.currentTarget;
-    let color = t.getAttribute('color');
+  const popBalloon = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const targetBalloon = e.currentTarget;
 
     audio.play();
-    t.style.visibility = 'hidden';
+    targetBalloon.style.visibility = 'hidden';
     setTimeout(() => {
       setShow(false);
     }, 2000);
